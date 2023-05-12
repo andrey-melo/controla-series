@@ -1,5 +1,3 @@
-<div class="container">
-    <x-layout title="Editar Série">
-        <x-series.form :action="route('series.edit')"/>
-    </x-layout>
-</div>
+<x-layout title="Editar Série '{!! $serie->nome !!}'">
+    <x-series.form :action="route('series.update', $serie->id)" :nome="$serie->nome" :update="true"/>
+</x-layout>
